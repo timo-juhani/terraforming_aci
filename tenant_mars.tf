@@ -19,6 +19,7 @@ resource "aci_bridge_domain" "mars_100" {
   tenant_dn          = aci_tenant.mars.id
   relation_fv_rs_ctx = aci_vrf.mars_vrf.name
   name               = "mars_100"
+  arp_flood          = "yes"
 }
 
 resource "aci_subnet" "mars_100_subnet" {
